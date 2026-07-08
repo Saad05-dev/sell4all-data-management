@@ -14,15 +14,15 @@ projet d'intelligence artificielle (recommandation automatique de produits).
   - Installation de l'environnement (Python via Miniconda, Jupyter, pandas, matplotlib)
   - Lecture du fichier CSV et affichage des 5 premières lignes
   - Affichage et explication du résumé technique des données
-<!-- - **Jour 2** :
+- **Jour 2** :
   - Calcul de la médiane et moyenne (Age, Customer spendings)
   - Question bonus : médiane d'âge par pays
   - Visualisation des dépenses par pays (graphique à barres)
-- **Jour 3** :
+    - Choix : Affichage de deux graphiques à barres distincts : un pour la moyenne, un pour la somme des dépenses par pays.
   - Nettoyage des lignes < 10€ de dépenses
   - Suppression des doublons
   - Export du CSV nettoyé avec les colonnes Country, Âge, Gender, Customer spendings
-  - Rédaction du README -->
+  - Rédaction du README 
 
 ## 3. Fonctionnalités développées / éléments finalisés
 
@@ -38,12 +38,10 @@ projet d'intelligence artificielle (recommandation automatique de produits).
 
 ## 4. Difficultés rencontrées et solutions mises en place
 
-<!-- Exemple :
-- Difficulté : gestion des valeurs manquantes dans la colonne Age.
-  Solution : vérifié avec isnull().sum(), décidé de ... -->
-
--
--
+- Difficulté : première utilisation de Python, Jupyter Notebook et de l'environnement Miniconda — habitué à coder dans un éditeur de code classique avec exécution linéaire d'un fichier avec terminal linux, pas avec des cellules indépendantes.
+  Solution : recherche de tutoriels sur le fonctionnement des cellules Jupyter (ordre d'exécution, kernel, état partagé entre cellules) ; plusieurs erreurs "variable non définie" corrigées en comprenant que les cellules doivent être exécutées dans le bon ordre (utilisation de "Restart & Run All" pour vérifier la cohérence du notebook).
+- Difficulté : découverte des fonctions pandas spécifiques (head, info, groupby, agg, drop_duplicates, etc.).
+  Solution : consultation de la documentation pandas et des ressources fournies dans le brief pour comprendre le rôle de chaque méthode avant de l'utiliser.
 
 ## 5. Mode d'exécution du projet
 
@@ -52,16 +50,20 @@ projet d'intelligence artificielle (recommandation automatique de produits).
 - Git
 
 ### Installation
+
 1. Cloner le dépôt :
    `git clone git@github.com:Saad05-dev/sell4all-data-management.git`
 2. Se placer dans le dossier du projet
-3. Activer l'environnement virtuel :
+  `cd sell4all-data-management`
+3. Créer et activer l'environnement virtuel :
+   `conda create -n sell4all-data-management python=3.11 -y`
    `conda activate sell4all-data-management`
 4. Installer les dépendances :
    `conda install pandas matplotlib jupyter notebook`
 
 
 ### Lancer le projet
+
 1. Démarrer Jupyter Notebook :
    `jupyter notebook`
 2. Ouvrir le fichier `exploration.ipynb`
@@ -73,7 +75,6 @@ projet d'intelligence artificielle (recommandation automatique de produits).
 ├── exploration.ipynb
 ├── dataset-sell4all.csv
 ├── dataset-sell4all-clean.csv
-├── environment.yml
 ├── README.md
 └── .gitignore
 ```
